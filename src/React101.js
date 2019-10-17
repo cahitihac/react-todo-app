@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class React101 extends Component {
 
     // The constructor for a React component is called before it is mounted
@@ -19,6 +20,9 @@ class React101 extends Component {
             age: 20,
             isActive: false
         }
+
+        // binding an event
+        this.doSomething = this._doSomething.bind(this);
     }
 
     render() {
@@ -26,7 +30,9 @@ class React101 extends Component {
         // should be pure and simple, should not modify the state
 
         return <div>Hello world!</div>; // JSX
-        return <CustomComponent></CustomComponent>; // a compone
+
+        // a custom component
+        return <CustomComponent></CustomComponent>;
 
         // if null is returned the component is unmounted
         // and nothing is rendered
@@ -65,8 +71,17 @@ class React101 extends Component {
 
         // This is the primary method you use to update the user interface
         this.setState({
-            name: "KandyClients",
             age: 25
+        }, () => {
+            // a callback function executed
+            // after the state is updated
         });
     }
+
+    // a custom function
+    _doSomething() {
+        // do something
+    }
 }
+
+export default React101;

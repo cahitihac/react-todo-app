@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-// a React component extented from React.Component
+// a React component that extends React.Component
 class Todo extends Component {
     render() {
         const { props } = this;
@@ -15,7 +15,10 @@ class Todo extends Component {
     }
 }
 
-// a functional component
+// how to call this component
+// <Todo todo={ {id: 1, text: "", checked: false} } />
+
+// a function (arrow function) component
 const Todo = props => (
     <li>
       <span>{ props.todo.id }</span>
@@ -25,7 +28,10 @@ const Todo = props => (
     </li>
 );
 
-// a functional component
+// when calling this component
+// <Todo todo={ id: 1, text: "", checked: false } />
+
+// a function component
 function Todo(props){
     return (
         <li>
@@ -37,3 +43,5 @@ function Todo(props){
     );
 }
 
+// when calling this component
+// <Todo todo={ id: 1, text: "", checked: false } />
